@@ -69,7 +69,7 @@ export default class App extends React.Component {
 			<Content>	
 				<View style={styles.container}>
 					<TouchableOpacity onPress={(evt) => handlePress(evt)}>
-						<Image style={styles.logo} resizeMode='cover'source={require('./res/LOGO.jpg')}/>
+						<Image style={styles.logo} resizeMode='cover'source={require('../res/LOGO.jpg')}/>
 					</TouchableOpacity>
 				</View>
 			</Content>
