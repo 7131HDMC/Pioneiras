@@ -2,21 +2,28 @@ import React from 'react'
 import {Image, StyleSheet, Text, View} from 'react-native';
 var{vw, vh, vmin, vmax} = require('react-native-expo-viewport-units');
 
-const cityscape = require('../../res/montgomery.jpeg');
-const person = require('../../res/Rosaparks.jpg');
+const person = 'rosa-parks';
+
+const cover = require(`../../res/pioneiras/${person}/cover.jpeg`);
+const avatar = require(`../../res/pioneiras/${person}/avatar.jpg`);
 
 
-export default function Info(){
-  
+export default function Info({ navigation }){
+
+  function handlePath(resource){
+    return navigation.person ? 
+      `../../res/pioneiras/${person}/${resource}` : 
+      null
+  };
 
  return (
    <View>
     <Image
-      source={cityscape}
+      source={handlePath('cover.jpeg')}
       style={styles.cover}
     />
     <Image
-      source={person}
+      source={handlePath('avatar.jpg')}
       style={styles.person}
     />
 
