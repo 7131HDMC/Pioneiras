@@ -7,23 +7,22 @@ const person = 'rosa-parks';
 const cover = require(`../../res/pioneiras/${person}/cover.jpeg`);
 const avatar = require(`../../res/pioneiras/${person}/avatar.jpg`);
 
+import res from '../../res/pioneiras/resources';
 
 export default function Info({ navigation }){
 
-  function handlePath(resource){
-    return navigation.person ? 
-      `../../res/pioneiras/${person}/${resource}` : 
-      null
-  };
-
+  const resources = navigation.getParam('person') ?
+                    res[navigation.getParam('person')] :
+                    null
+ 
  return (
    <View>
     <Image
-      source={handlePath('cover.jpeg')}
+      source={resources.cover}
       style={styles.cover}
     />
     <Image
-      source={handlePath('avatar.jpg')}
+      source={resources.avatar}
       style={styles.person}
     />
 
