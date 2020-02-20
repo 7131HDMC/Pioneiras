@@ -1,9 +1,6 @@
 import React from 'react';
 import {StyleSheet,  Image, Text, TouchableOpacity, SafeAreaView, ScrollView, Platform, StatusBar} from 'react-native';
 
-const Tavatar = require('../../res/Rosaparks.jpg');
-
-
 export default function List({ navigation }){
  
 
