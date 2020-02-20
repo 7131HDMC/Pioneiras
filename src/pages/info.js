@@ -1,11 +1,6 @@
 import React from 'react'
 import {Image, StyleSheet, Text, View} from 'react-native';
-var{vw, vh, vmin, vmax} = require('react-native-expo-viewport-units');
-
-const person = 'rosa-parks';
-
-const cover = require(`../../res/pioneiras/${person}/cover.jpeg`);
-const avatar = require(`../../res/pioneiras/${person}/avatar.jpg`);
+var{vh} = require('react-native-expo-viewport-units');
 
 import res from '../../res/pioneiras/resources';
 
