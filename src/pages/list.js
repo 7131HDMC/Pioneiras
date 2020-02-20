@@ -4,20 +4,26 @@ import {StyleSheet,  Image, Text, TouchableOpacity, SafeAreaView, ScrollView, Pl
 const Tavatar = require('../../res/Rosaparks.jpg');
 
 
-export default function List(){
-  
+export default function List({ navigation }){
+ 
 
 
   return (
     <SafeAreaView style={styles.safe}>
 
       <ScrollView>
-        <TouchableOpacity style={styles.itemWrapper}>
+
+        <TouchableOpacity 
+          style={styles.itemWrapper}
+          onPress={() => navigation.navigate('Info', {person: 'rosa-parks'})} 
+        >
           <Image
             style={styles.avatar}
             source={Tavatar}
-          /> 
+          />
+
           <Text style={styles.name}>Rosa Parks</Text>
+        
         </TouchableOpacity>
       </ScrollView>
     </SafeAreaView>
