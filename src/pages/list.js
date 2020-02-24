@@ -4,7 +4,6 @@ import {StyleSheet,  Image, Text, TouchableOpacity, SafeAreaView, ScrollView, Pl
 import res from '../../res/pioneiras/resources';
 
 export default function List({ navigation }){
- 
 
 
   return (
