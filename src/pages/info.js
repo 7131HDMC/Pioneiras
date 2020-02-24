@@ -4,10 +4,10 @@ var{vh} = require('react-native-expo-viewport-units');
 
 import res from '../../res/pioneiras/resources';
 
-export default function Info({ navigation }){
+export default function Info({ route, navigation }){
 
-  const resources = navigation.getParam('person') ?
-                    res[navigation.getParam('person')] :
+  const resources = route.params.person ?
+                    res[route.params.person] :
                     null
  
  return (

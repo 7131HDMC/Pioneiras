@@ -15,7 +15,7 @@ export default function List({ navigation }){
           <TouchableOpacity 
             key={key}
             style={styles.itemWrapper}
-            onPress={() => navigation.navigate('Info', {person: key})} 
+            onPress={() => navigation.push('Info', {person: key})} 
           >
             <Image
               style={styles.avatar}
