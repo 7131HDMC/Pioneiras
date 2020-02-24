@@ -10,18 +10,21 @@ export default function List({ navigation }){
 
       <ScrollView>
 
-        <TouchableOpacity 
-          style={styles.itemWrapper}
-          onPress={() => navigation.navigate('Info', {person: 'rosa-parks'})} 
-        >
-          <Image
-            style={styles.avatar}
-            source={Tavatar}
-          />
+        {Object.keys(res).map(key => 
+          <TouchableOpacity 
+            key={key}
+            style={styles.itemWrapper}
+            onPress={() => navigation.navigate('Info', {person: key})} 
+          >
+            <Image
+              style={styles.avatar}
+              source={res[key].avatar}
+            />
 
-          <Text style={styles.name}>Rosa Parks</Text>
-        
-        </TouchableOpacity>
+            <Text style={styles.name}>{res[key].name}</Text>
+          
+          </TouchableOpacity>
+        )}
       </ScrollView>
     </SafeAreaView>
   
