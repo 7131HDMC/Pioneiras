@@ -3,7 +3,9 @@ import {StyleSheet,  Image, Text, TouchableOpacity, SafeAreaView, ScrollView, Pl
 
 import res from '../../res/pioneiras/resources';
 
-export default function List({ navigation }){
+export default function List({ route, navigation }){
+  part=route.params.part;
+  res = res[part];
 
 
   return (
