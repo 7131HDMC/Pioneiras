@@ -1,6 +1,8 @@
 import React from 'react';
 import {StyleSheet,  Image, Text, TouchableOpacity, SafeAreaView, ScrollView, Platform, StatusBar} from 'react-native';
 
+import res from '../../res/pioneiras/resources';
+
 export default function List({ navigation }){
  
 
