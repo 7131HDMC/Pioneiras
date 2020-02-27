@@ -7,7 +7,7 @@ import res from '../../res/pioneiras/resources';
 export default function Info({ route, navigation }){
 
   const resources = route.params.person ?
-                    res[route.params.person] :
+                    res[route.params.part][route.params.person] :
                     null
  
  return (

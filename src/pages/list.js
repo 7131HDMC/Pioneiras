@@ -4,8 +4,8 @@ import {StyleSheet,  Image, Text, TouchableOpacity, SafeAreaView, ScrollView, Pl
 import res from '../../res/pioneiras/resources';
 
 export default function List({ route, navigation }){
-  part=route.params.part;
-  res = res[part];
+  part = route.params ? route.params.part : 'root' 
+  const list = res[part];
 
 
   return (
@@ -13,18 +13,18 @@ export default function List({ route, navigation }){
 
       <ScrollView>
 
-        {Object.keys(res).map(key => 
+        {Object.keys(list).map(key => 
           <TouchableOpacity 
             key={key}
             style={styles.itemWrapper}
-            onPress={() => navigation.push('Info', {person: key})} 
+            onPress={() => navigation.push('Info', {person: key, part})} 
           >
             <Image
               style={styles.avatar}
-              source={res[key].avatar}
+              source={list[key].avatar}
             />
 
-            <Text style={styles.name}>{res[key].name}</Text>
+            <Text style={styles.name}>{list[key].name}</Text>
           
           </TouchableOpacity>
         )}
