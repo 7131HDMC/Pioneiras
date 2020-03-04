@@ -1,79 +1,34 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
+import * as React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
-import React from 'react';
+import Tree from './main';
+import List from './pages/list';
+import Info from './pages/info'
 
-var ImageMapper = require("react-image-mapper");
+const Stack = createStackNavigator();
 
-import { Container, Header, Title, Content, Footer, FooterTab, Button, Left, Right, Body, Icon } from 'native-base';
-import {
-	StyleSheet,
-	TouchableOpacity,
-	Text,
-	Alert,
-	View,
-	Image,
-} from 'react-native';
+function Routes() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator screenOptions={{ headerShown: false }}>
+        <Stack.Screen
+          name="Home"
+          component={Tree}
+        />
+        <Stack.Screen 
+	name="List" 
+	component={List} 
+	/>
 
-const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		backgroundColor: '#e4e4e4',
-		alignItems: 'center',
-		justifyContent: 'center',
-	},
-	logo: {
-    		flex: 5,
-	},
-
-});
-
-
-
-
-function handlePress(evt){
-	if(evt.nativeEvent.locationY > 440){
-		Alert.alert(` RAIZ: y is ${evt.nativeEvent.locationY}`);
-	}
-	if(evt.nativeEvent.locationY < 460 && evt.nativeEvent.locationY > 340){
-		Alert.alert(` Tronco: y is ${evt.nativeEvent.locationY}`);
-	}
-	if(evt.nativeEvent.locationY > 40 && evt.nativeEvent.locationY < 340){
-		Alert.alert(` Copa: y is ${evt.nativeEvent.locationY}`);
-	}
-
-
+    <Stack.Screen 
+	name="Info" 
+	component={Info}
+	 />
+      
+	</Stack.Navigator>
+	
+</NavigationContainer>
+  );
 }
-
-export default class App extends React.Component {
-	render(){
-		return (
-		<Container>
-			<Header>
-			    	<Left>
-			      		<Button transparent>
-			        		<Icon name='menu' />
-					</Button>
-				</Left>
-				<Body>
-					<Title>PioneirasBr</Title>
-				</Body>
-				<Right/>
-			</Header>
-
-			<Content>	
-				<View style={styles.container}>
-					<TouchableOpacity onPress={(evt) => handlePress(evt)}>
-						<Image style={styles.logo} resizeMode='cover'source={require('../res/LOGO.jpg')}/>
-					</TouchableOpacity>
-				</View>
-			</Content>
-		</Container>
-		);
-	}
-}
+export default Routes;
