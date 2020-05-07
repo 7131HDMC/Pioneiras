@@ -17,6 +17,57 @@ import  ImageMapper from 'react-native-image-mapper';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
+
+
+function handlePress(item, idx, event, navigation){
+		if(item.id == 0){
+			 navigation.navigate('List');
+
+			console.log('8');		
+		} else 
+			if(item.id == 1){
+                        	console.log('Tronco');                
+                	}else
+	                        if(item.id == 2){
+                               		 console.log('Copa');
+                        }
+
+                
+	}
+
+export default function Tree ({navigation}) {
+		return (
+			<Container>
+			 	<Header>
+			    	<Left>
+			      		<Button transparent>
+			       			<Icon name='menu' />
+						</Button>
+					</Left>
+					<Body>
+						<Title>PioneirasBr</Title>
+					</Body>
+					<Right/>
+				</Header>	
+
+				<ImageMapper 
+					imgHeight={height} 
+					imgWidth={width} 
+					imgMap={MAPPING}  
+					imgSource={imageLogo} 
+					onPress={(item, idx, event) => 
+							navigation.navigate('List', { part : item.name } )
+						}
+				/>
+
+			</Container>			
+		);
+
+	
+
+}
+
+
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
@@ -30,7 +81,7 @@ const styles = StyleSheet.create({
 
 });
 
-const imageLogo = require('../res/LOGO.jpg');
+const imageLogo = require('../assets/LOGO.jpg');
 const  height = 500
 const  width = 365
 const MAPPING = [
@@ -63,45 +114,3 @@ const MAPPING = [
   },
 
 ]
-
-function handlePress(item, idx, event, navigation){
-		if(item.id == 0){
-			 navigation.navigate('List');
-
-			console.log('8');		
-		} else 
-			if(item.id == 1){
-                        	console.log('Tronco');                
-                	}else
-	                        if(item.id == 2){
-                               		 console.log('Copa');
-                        }
-
-                
-	}
-
-function Tree ({navigation}) {
-		return (
-			<Container>
-			 	<Header>
-			    		<Left>
-			      			<Button transparent>
-			        			<Icon name='menu' />
-						</Button>
-					</Left>
-					<Body>
-						<Title>PioneirasBr</Title>
-					</Body>
-					<Right/>
-				</Header>	
-
-				<ImageMapper imgHeight={height} imgWidth={width} imgMap={MAPPING}  imgSource={imageLogo} onPress={(item, idx, event) =>  navigation.navigate('List', { part : item.name })}/>
-
-			</Container>			
-		);
-
-	
-
-}
-
-export default Tree;

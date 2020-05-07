@@ -1,4 +1,23 @@
 {
-  "name": "pioneirasbr",
-  "displayName": "pioneirasbr"
+  "expo": {
+    "name": "pioneiras",
+    "slug": "pioneiras",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "version": "1.0.1",
+    "orientation": "portrait",
+
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    }
+  }
 }

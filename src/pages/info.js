@@ -2,7 +2,7 @@ import React from 'react'
 import {Image, StyleSheet, Text, View} from 'react-native';
 var{vh} = require('react-native-expo-viewport-units');
 
-import res from '../../res/pioneiras/resources';
+import res from '../../database/database_pioneiras';
 
 export default function Info({ route, navigation }){
 

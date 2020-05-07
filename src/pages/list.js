@@ -1,7 +1,7 @@
 import React from 'react';
 import {StyleSheet,  Image, Text, TouchableOpacity, SafeAreaView, ScrollView, Platform, StatusBar} from 'react-native';
 
-import res from '../../res/pioneiras/resources';
+import res from '../../database/database_pioneiras';
 
 export default function List({ route, navigation }){
   part = route.params ? route.params.part : 'root' 
