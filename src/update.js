@@ -6,8 +6,10 @@ class UpdateData extends Component {
 
     getPioneers = () => fetch('https://github.com/7131HDMC/Pioneiras/tree/master/res/pioneiras/resources.js')
      .then((response)  => {
-        this.setState({ result: response})
+        state = { result: response }; 
         console.log(this.state.result)
+        console.log("result");
+        
 
      })
      .catch((error) => {

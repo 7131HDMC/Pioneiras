@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { Root } from "native-base";
-import { Font, AppLoading } from "expo";
-import Load from './src/load';
+import * as Font  from "expo-font";
+import { ActivityIndicator } from 'react-native-paper';
 
+import Load from './src/load';
 import Tree from './src/main';
 import List from './src/pages/list';
 import Info from './src/pages/info'
@@ -24,58 +24,60 @@ const config = {
 const Stack = createStackNavigator();
 const net = new Load();
 
+let customFonts = {
+  OpenSansLight : require('./assets/fonts/Open_Sans/OpenSans-Light.ttf'),
+  PlayfairDisplay : require('./assets/fonts/Playfair_Display/static/PlayfairDisplay-Black.ttf'), 
+  Roboto: require('native-base/Fonts/Roboto.ttf'),
+  Roboto_medium: require('native-base/Fonts/Roboto_medium.ttf')
+
+};
 
 class Routes extends React.Component{
-   state = {
-    loading: false
+  
+  state = { 
+    fontsLoaded: false 
   }
-
- async componentDidMount(){
-  net.CheckConnectivity();
-            console.log("component!");
 
   
-    await Font.loadAsync({
-      'Roboto': require('native-base/Fonts/Roboto.ttf'),
-      'Roboto_medium': require('native-base/Fonts/Roboto_medium.ttf'),
-      ...Ionicons.font,
-    })
-    this.setState({ loading: false })
+
+  UNSAFE_componentWillMount =  async() => {
+    
+    await Font.loadAsync(customFonts);
+    this.setState({ fontsLoaded: true});
+
+    net.CheckConnectivity();
   }
-  render(){
-    if (this.state.loading) {
-           return (
-             <Root>
-                <AppLoading />
-            </Root>
-           );
+
+  render() {
+   if (!this.state.fontsLoaded) {
+      return <ActivityIndicator /> ;
+    }else{
+      return (
+        <NavigationContainer>
+          <Stack.Navigator screenOptions={{ headerShown: false }}>
+            <Stack.Screen 
+            name="Home" 
+            component={Tree}   
+            
+            />
+
+            <Stack.Screen 
+            name="List" 
+            component={List} 
+            
+            />
+
+            <Stack.Screen 
+            name="Info" 
+            component={Info}
+            
+            />
+
+          </Stack.Navigator>
+
+        </NavigationContainer>
+      );
     }
-
-    return (
-      <NavigationContainer>
-        <Stack.Navigator screenOptions={{ headerShown: false }}>
-          <Stack.Screen 
-          name="Home" 
-          component={Tree}   
-          
-          />
-
-          <Stack.Screen 
-          name="List" 
-          component={List} 
-          
-          />
-
-          <Stack.Screen 
-          name="Info" 
-          component={Info}
-          
-          />
-
-        </Stack.Navigator>
-
-      </NavigationContainer>
-    );
   }
   
 }
