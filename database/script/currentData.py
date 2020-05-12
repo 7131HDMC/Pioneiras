@@ -2,8 +2,8 @@ import json
 
 class CurrentData:
   data_file = '../database_pioneiras.js'
-  def getData(self,file_name):
-    with open(file_name) as arq:
+  def getData(self):
+    with open(self.data_file) as arq:
       arq_str = arq.read()	#return file as string
       arq_str = self.removeJS(arq_str)
       pioneers = json.loads(arq_str)

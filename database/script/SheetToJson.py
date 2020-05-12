@@ -8,8 +8,11 @@ from currentData import CurrentData
 class SheetToJson:
   data = 0
   headers = 0
+
   pioneers = 0
   
+  century = 0
+  name = 0
   def __init__(self):
     #url's for get Pioneras's sheet
     scope = ['https://spreadsheets.google.com/feeds','https://www.googleapis.com/auth/drive']
@@ -21,7 +24,9 @@ class SheetToJson:
     #removing the headers
     self.headers = self.data.pop(0)
     #getting the current data of pioneers
-  
+    current = CurrentData()
+    self.pioneers = current.getData()
+
   def getSheet(self,file_name, scope):
     credentials = ServiceAccountCredentials.from_json_keyfile_name(file_name, scope)    
     gc = gspread.authorize(credentials)
@@ -32,11 +37,17 @@ class SheetToJson:
     df = pd.DataFrame(data, columns=headers)
 
   def loop(self): 
-    for pioneer in sheet.data:  
-      for value in pioneer: 
-        datatime = self.getDataTime(value) 
+    pioneer_js = {}
+    for self.pioneer in self.data:  
+      for k in df.keys():  
+        #datatime = self.getDataTime(pioneer[])
+        self.linkValues(key=k,pioneer=pioneer_js)
 
-
+  def linkValues(self,key):
+    if key == 1:
+      self.century = self.getDataTime(pioneer[k])
+    elif key == 2:
+    	#
   def getDataTime(self,datatime): 
     if '﻿Raiz (< Séc.XVI  até XVII)'== datatime: 
       return 'root' 
