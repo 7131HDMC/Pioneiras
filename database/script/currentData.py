@@ -1,6 +1,6 @@
+import json
 
-
-class CurrentDataBase:
+class CurrentData:
   data_file = '../database_pioneiras.js'
   def getData(self,file_name):
     with open(file_name) as arq:
