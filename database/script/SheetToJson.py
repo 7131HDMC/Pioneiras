@@ -27,7 +27,7 @@ class SheetToJson:
     #getting the current data of pioneers
     current = CurrentData()
     self.pioneers = current.getData()
-    self.df = pd.DataFrame(data, columns=headers)
+    self.df = pd.DataFrame(self.data, columns=self.headers)
 
   def getSheet(self,file_name, scope):
     credentials = ServiceAccountCredentials.from_json_keyfile_name(file_name, scope)    
@@ -35,16 +35,20 @@ class SheetToJson:
     wks = gc.open('Pioneiras').sheet1
     self.data = wks.get_all_values()
 
-  def makeJson(self):
+  #def makeJson(self):
     
   def loop(self): 
     pioneer_js = {"extra":[]}
-    for pioneer in self.data:  
-      for k in self.df.keys(): #percorre os dada 
+    headers = len(self.df.keys())
+    for pioneer in self.data: 
+
+      for key in range(headers): #percorre os dada 
+        
         if key == 9 or key == 12 or key == 15 or key == 10 or key == 13 or key == 16 or key == 17:
           continue
-        self.linkValues(key=k,data=pioneer,js=pioneer_js)
-    self.makeJson(pioneer_js)
+        self.linkValues(key=key,pioneer=pioneer,js=pioneer_js)
+    #self.makeJson(pioneer_js)
+    print(pioneer_js)
 
   def linkValues(self,key, pioneer, js):
     if key == 1:
@@ -61,17 +65,16 @@ class SheetToJson:
       js["flavortext"] = resume
     elif key == 7:
       bibiograph = pioneer[key]
-      js[text] = bibiograph
+      js["text"] = bibiograph
     elif key == 4:
-    	author = pioneer[key]
-    	js["author"] = author
+      author = pioneer[key]
+      js["author"] = author
     elif key == 8 or key == 11 or key == 14:
       if pioneer[key] == 'sim':
         text_extra_type = pioneer[(k+1)]
-   	    text_extra = pioneer[(k+2)]
-   	    js["extra"].append({"type": text_extra_type,  "content" : text_extra})
-   	
-
+        text_extra = pioneer[(k+2)]
+        js["extra"].append({"type": text_extra_type,  "content" : text_extra})
+    print(js)
       
   def getDataTime(self,datatime): 
     if '﻿Raiz (< Séc.XVI  até XVII)'== datatime: 
