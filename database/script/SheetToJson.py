@@ -42,13 +42,18 @@ class SheetToJson:
         if key == 9 or key == 12 or key == 15 or key == 10 or key == 13 or key == 16 or key == 17:
           continue
         self.linkValues(key=key,pioneer=pioneer,js=pioneer_js)
-      self.pioneers[self.century][self.name] = pioneer_js
+      name_it = self.name.replace(" ","-")
+      self.pioneers[self.century][name_it] = pioneer_js
+
     str_pioneers = str(self.pioneers)
     str_pioneers = self.current.putJS(str_pioneers)
     self.writeJson(str_pioneers)
     #self.makeJson(pioneer_js)
     print(pioneer_js)
-    #print("\n Putting JS \n")
+    print("\n Dict Obj \n")
+    print(self.pioneers)
+    print("\n Putting JS \n")
+    print(str_pioneers)
 
 
   def linkValues(self,key, pioneer, js):
@@ -59,31 +64,31 @@ class SheetToJson:
       name = pioneer[5]
       type_name = "avatar.png"
       image = DriveImage(url, name, type_name)
-      js["avatar"] = image.main()
+      js["avatar"] = "\'<"+ image.main() + ">\'"
 
     elif key == 3:
       url = pioneer[key]
       type_name = "cover.png"
       name = pioneer[5]
       image = DriveImage(url, name, type_name)
-      js["cover"] = image.main()
+      js["cover"] = "\'<"+ image.main() + ">\'"
 
     elif key == 5 :
       self.name = pioneer[key]
-      js["name"] = self.name
+      js["name"] = self.name + "\n"
     elif key == 6:
       resume = pioneer[key]
-      js["flavortext"] = resume
+      js["flavortext"] = resume + "\n"
     elif key == 7:
       bibiograph = pioneer[key]
-      js["text"] = bibiograph
+      js["text"] = bibiograph + "\n"
     elif key == 4:
       author = pioneer[key]
-      js["author"] = author
+      js["author"] = author + "\n"
     elif key == 8 or key == 11 or key == 14:
       if pioneer[key] == 'sim':
-        text_extra_type = pioneer[(k+1)]
-        text_extra = pioneer[(k+2)]
+        text_extra_type = pioneer[(k+1)] + "\n"
+        text_extra = pioneer[(k+2)] + "\n"
         js["extra"].append({"type": text_extra_type,  "content" : text_extra})
     #print(js)
       

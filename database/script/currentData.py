@@ -28,12 +28,11 @@ class CurrentData:
   file is a string 
   """
   def putJS(self,file):
-    file = file.replace("\"<","require(\"")     
-    file = file.replace( ">\",\n" ,"\"),\n")
-    key = file.find('{')
-    rest = file[:key]
-    js_command = 'var res = '
-    file = file.replace(' ', js_command, 1)
+    file = file.replace("\'<","require(\"")     
+    file = file.replace( ">\'," ,"\"),\n")
+    #key = file.find('{')
+    #rest = file[:key]
+    file = 'var res = ' + file 
 
     file = file + '; \n export default res;'
     return file
