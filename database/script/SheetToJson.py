@@ -71,24 +71,24 @@ class SheetToJson:
       type_name = "cover.png"
       name = pioneer[5]
       image = DriveImage(url, name, type_name)
-      js["cover"] = "\'<"+ image.main() + ">\'"
+      js["cover"] = '\'<'+ image.main() + '>\''
 
     elif key == 5 :
       self.name = pioneer[key]
-      js["name"] = self.name + "\n"
+      js["name"] = self.name 
     elif key == 6:
       resume = pioneer[key]
-      js["flavortext"] = resume + "\n"
+      js["flavortext"] = resume 
     elif key == 7:
       bibiograph = pioneer[key]
-      js["text"] = bibiograph + "\n"
+      js["text"] = bibiograph 
     elif key == 4:
       author = pioneer[key]
-      js["author"] = author + "\n"
+      js["author"] = author 
     elif key == 8 or key == 11 or key == 14:
       if pioneer[key] == 'sim':
-        text_extra_type = pioneer[(k+1)] + "\n"
-        text_extra = pioneer[(k+2)] + "\n"
+        text_extra_type = pioneer[(k+1)] 
+        text_extra = pioneer[(k+2)] 
         js["extra"].append({"type": text_extra_type,  "content" : text_extra})
     #print(js)
       

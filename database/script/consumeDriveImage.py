@@ -13,7 +13,7 @@ from googleapiclient.discovery import build
 class DriveImage:
 
   def __init__(self, url, name, type_name):
-    SCOPES = "https://www.googleapis.com/auth/drive.readonly" 
+    SCOPES = ["https://www.googleapis.com/auth/drive.readonly"] 
     CLIENT_SECRET_FILE = "/home/monkey/Desktop/pioneiras/UpdatePioneers/credentials.json"   
     credentials = self.auth(client_secret_filename=CLIENT_SECRET_FILE, scopes=SCOPES)
     self.link = url

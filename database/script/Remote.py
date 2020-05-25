@@ -3,13 +3,12 @@ import os
 class UpdateRemote:
 
   def gitAdd(self):
-    path = ' ../database_pioneiras.js'
-    command = 'git add '
-    _add = command + path
+    command = 'git add . '
+    _add = command 
     os.system(_add)
 
   def gitCommit(self):
-    text = ' Update database of women'
+    text = ' \"Update database of women\"'
     command = 'git commit -m '
     _commit = command + text
     os.system(_commit)
