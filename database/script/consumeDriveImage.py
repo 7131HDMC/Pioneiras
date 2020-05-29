@@ -66,10 +66,10 @@ class DriveImage:
       return destination
 
   def getDestination(self):
-    dir_pioneer =  "../../assets/pioneiras/"+ self.name
+    dir_pioneer =  "../assets/pioneiras/"+ self.name
     if ~os.path.exists(dir_pioneer):
       try:
-        os.mkdir(dir_pioneer)
+        os.mkdir("../"+dir_pioneer)
       except OSError:
         print("OSError: error to create directory {} ".format(dir_pioneer))
     

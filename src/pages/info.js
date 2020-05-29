@@ -1,7 +1,9 @@
 import React from 'react'
 import {
-  Image, 
+  Image,
+  ImageBackground, 
   StyleSheet, 
+  FlatList,
   Text, 
   View,
   ScrollView
@@ -12,35 +14,53 @@ import res from '../../database/database_pioneiras';
 
 export default function Info({ route, navigation }){
 
-  const resources = route.params.person ?
+  const RESOURCES = route.params.person ?
                     res[route.params.part][route.params.person] :
                     null
- 
+const extras = RESOURCES.extra; 
  return (
   <ScrollView>
-     <View>
-      <Image
-        source={resources.cover}
-        style={styles.cover}
-      />
-      <Image
-        source={resources.avatar}
-        style={styles.person}
-      />
 
-      
-      <Text style={styles.name}>
-        {resources.name}
-      </Text>
-      
-      <Text style={styles.flavortext}>
-        {resources.flavortext}
-      </Text>
-      
-      <Text style={styles.info}>
-        {resources.text}
-      </Text>
-      
+     <View style={styles.content}>
+        <View>
+        <ImageBackground
+            source={RESOURCES.cover}
+            style={styles.cover}>
+          
+            <Text style={styles.name}>
+              {RESOURCES.name}
+            </Text>
+          
+          </ImageBackground>
+
+          <Image
+            source={RESOURCES.avatar}
+            style={styles.person}/>
+
+        <Text style={styles.flavortext}>
+          {RESOURCES.flavortext}
+        </Text>
+        
+        <Text style={styles.info}>
+          {RESOURCES.text}
+        </Text>
+
+         {Object.keys(extras).map(key =>
+           <View>
+
+              <Text style={styles.extraTitle}>
+                {extras[key].type}
+              </Text>
+
+              <Text style={styles.extraInfo}>
+                {extras[key].content}
+              </Text>
+             </View>
+
+          )}
+                   
+      </View>
+
       <View style={styles.footer}>    
 
       </View>
@@ -51,12 +71,28 @@ export default function Info({ route, navigation }){
 
 }
 
-const styles = StyleSheet.create({
-  cover: {
-    height: '25%',
-    width: '100%'
-  },
+function Item({title, content})
+{
+  return (
+    <View>
+      <Text>
+        {title}
+      </Text>
+    </View>
+  )
+}
 
+
+const styles = StyleSheet.create({
+  content: {
+    backgroundColor: '#fff'
+  },
+  cover: {
+    opacity: 200,
+    width: '100%',
+    height: 275
+  },
+ 
   person: {
     position: 'relative',
     top: -vh(10),
@@ -74,14 +110,16 @@ const styles = StyleSheet.create({
 
   flavortext: {
     position: 'relative',
-    top: -vh(2),
-    borderColor: '#FFF',
-    borderWidth: 2,
-    borderRadius: 10,
-    marginLeft:   '10%',
-    marginRight:  '10%',
-    fontFamily: 'PlayfairDisplay',
-    marginBottom: '5%'
+    marginLeft:   'auto',
+    marginRight:  'auto',
+    marginBottom: '6%',
+    paddingHorizontal: 10,
+    fontSize: 16,
+    color: '#333',
+    fontFamily: 'OpenSansLight',
+    writingDirection: 'ltr',
+    letterSpacing: 0.5,
+    fontWeight: "bold"
 
   },
 
@@ -90,24 +128,45 @@ const styles = StyleSheet.create({
     marginRight:  'auto',
     paddingHorizontal: 10,
     fontSize: 16,
-    marginBottom: '10%',
     justifyContent: 'center',
     alignItems: 'stretch',
+
+    writingDirection: 'ltr',
+    letterSpacing: 1.5,
     fontFamily: 'OpenSansLight'
   },
 
   name: {
-    justifyContent: 'center',
+    top: '40%',
+    padding: '8%',
+    fontWeight: 'bold',
+    color: 'grey',
     alignSelf: 'center',
-    top: -vh(5),
     fontSize: 32,
     fontFamily: 'OpenSansLight'
 
 
   },
+  extraTitle: {
+    padding: '8%',
+    alignSelf: 'center',
+    fontSize: 26,
+    fontFamily: 'OpenSansLight'
+  },
+
+  extraInfo: {
+    margin:  20,
+    fontSize: 16,
+    justifyContent: 'center',
+    alignSelf: 'center',
+    alignItems: 'stretch',
+    writingDirection: 'ltr',
+    letterSpacing: 0.6,
+    fontFamily: 'OpenSansLight'
+  },
 
   footer: {
-
+    height: 150
   },
 
 })

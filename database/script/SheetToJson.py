@@ -42,8 +42,7 @@ class SheetToJson:
         if key == 9 or key == 12 or key == 15 or key == 10 or key == 13 or key == 16 or key == 17:
           continue
         self.linkValues(key=key,pioneer=pioneer,js=pioneer_js)
-      name_it = self.name.replace(" ","-")
-      self.pioneers[self.century][name_it] = pioneer_js
+      self.pioneers[self.century][self.link_name] = pioneer_js
 
     str_pioneers = str(self.pioneers)
     str_pioneers = self.current.putJS(str_pioneers)
@@ -57,32 +56,33 @@ class SheetToJson:
 
 
   def linkValues(self,key, pioneer, js):
-    if key == 1:
+    if key == 2:
       self.century = self.getDataTime(pioneer[key])
-    elif key == 2:
-      url = pioneer[key]
-      name = pioneer[5]
-      type_name = "avatar.png"
-      image = DriveImage(url, name, type_name)
-      js["avatar"] = "\'<"+ image.main() + ">\'"
-
     elif key == 3:
       url = pioneer[key]
+      type_name = "avatar.png"
+      image = DriveImage(url, self.link_name, type_name)
+      js["avatar"] = "\'<"+ image.main() + ">\'"
+
+    elif key == 4:
+      url = pioneer[key]
       type_name = "cover.png"
-      name = pioneer[5]
-      image = DriveImage(url, name, type_name)
+      image = DriveImage(url, self.link_name, type_name)
       js["cover"] = '\'<'+ image.main() + '>\''
 
-    elif key == 5 :
-      self.name = pioneer[key]
-      js["name"] = self.name 
+    elif key == 1 :
+      name = pioneer[key]
+      js["name"] = name 
+      clean_name = name.lower()
+      clean_name = clean_name.replace(" ", "-") 
+      self.link_name = clean_name
     elif key == 6:
       resume = pioneer[key]
       js["flavortext"] = resume 
     elif key == 7:
       bibiograph = pioneer[key]
       js["text"] = bibiograph 
-    elif key == 4:
+    elif key == 5:
       author = pioneer[key]
       js["author"] = author 
     elif key == 8 or key == 11 or key == 14:
