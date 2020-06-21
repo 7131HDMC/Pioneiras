@@ -93,12 +93,13 @@ class SheetToJson:
     #print(js)
       
   def getDataTime(self,datatime): 
-    if '﻿Raiz (< Séc.XVI  até XVII)'== datatime: 
+    if 'Raiz (< Séc.XVI  até XVII)' == datatime: 
       return 'root' 
     if 'Tronco (Séc.XVII e XIX)' == datatime: 
       return 'body' 
     if 'Copa (Séc.XX e XXI)' == datatime: 
       return 'crown' 
+    return datatime
 
 
 
