@@ -22,6 +22,9 @@ export default function List({ route, navigation }){
     <SafeAreaView style={styles.safe}>
 
       <ScrollView>
+        { 
+          // salve hari
+        }
 
         {Object.keys(list).map(key => 
           <TouchableOpacity 
