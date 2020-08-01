@@ -73,7 +73,7 @@ class DriveImage:
       except OSError:
         print("OSError: error to create directory {} ".format(dir_pioneer))
     
-    dir_pioneer = "../" + dir_pioneer + "/" + self.type_name 
+    dir_pioneer += "/" + self.type_name 
     return dir_pioneer
 
   def getID(self):
