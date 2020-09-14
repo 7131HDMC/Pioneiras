@@ -11,7 +11,7 @@ import {
 
 } from 'react-native';
 
-import res from '../../database/database_pioneiras';
+import res from '~/database/database_pioneiras';
 
 export default function List({ route, navigation }){
   var  part = route.params ? route.params.part : 'root' 

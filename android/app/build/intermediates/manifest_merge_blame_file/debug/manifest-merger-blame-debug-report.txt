@@ -1,0 +1,238 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="br.com.pioneers.team"
+4    android:versionCode="4194305"
+5    android:versionName="1.0.1" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="28" />
+10
+11    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+11-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:3:3-75
+11-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:3:20-73
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:2:3-64
+12-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:2:20-62
+13    <uses-permission android:name="android.permission.MANAGE_DOCUMENTS" />
+13-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:4:3-72
+13-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:4:20-70
+14    <uses-permission android:name="android.permission.READ_INTERNAL_STORAGE" />
+14-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:5:3-77
+14-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:5:20-75
+15    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+15-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:6:3-72
+15-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:6:20-70
+16    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+16-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:7:3-71
+16-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:7:20-69
+17    <uses-permission android:name="android.permission.VIBRATE" />
+17-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:8:3-63
+17-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:8:20-61
+18    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+18-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:9:3-77
+18-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:9:20-75
+19    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+19-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:10:3-78
+19-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:10:20-76
+20    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+20-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:11:3-76
+20-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:11:20-74
+21    <uses-permission android:name="android.permission.CAMERA" />
+21-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:12:3-62
+21-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:12:20-60
+22    <uses-permission android:name="android.permission.READ_CONTACTS" />
+22-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:13:3-69
+22-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:13:20-67
+23    <uses-permission android:name="android.permission.READ_CALENDAR" />
+23-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:14:3-69
+23-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:14:20-67
+24    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+24-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:15:3-70
+24-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:15:20-68
+25    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+25-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:16:3-77
+25-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:16:20-75
+26    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+26-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:17:3-68
+26-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:17:20-66
+27    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+27-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:18:3-78
+27-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:18:20-76
+28    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+28-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:19:3-70
+28-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:19:20-68
+29    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+29-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:20:3-76
+29-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:20:20-74
+30    <uses-permission android:name="android.permission.WAKE_LOCK" />
+30-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:21:3-65
+30-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:21:20-63
+31    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+31-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:22:3-79
+31-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:22:20-77
+32    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+32-->[:react-native-community_netinfo] /home/home/Desktop/pioneiras/Pioneiras/node_modules/@react-native-community/netinfo/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:10:5-76
+32-->[:react-native-community_netinfo] /home/home/Desktop/pioneiras/Pioneiras/node_modules/@react-native-community/netinfo/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:10:22-73
+33    <uses-permission android:name="android.permission.STORAGE" />
+33-->[:expo-file-system] /home/home/Desktop/pioneiras/Pioneiras/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:5-66
+33-->[:expo-file-system] /home/home/Desktop/pioneiras/Pioneiras/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:22-63
+34    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+34-->[:expo-location] /home/home/Desktop/pioneiras/Pioneiras/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:5-77
+34-->[:expo-location] /home/home/Desktop/pioneiras/Pioneiras/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:22-74
+35    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+35-->[io.nlopez.smartlocation:library:3.2.11] /home/home/.gradle/caches/transforms-2/files-2.1/88915dccd651b89410d6a0166462dce2/jetified-library-3.2.11/AndroidManifest.xml:15:5-98
+35-->[io.nlopez.smartlocation:library:3.2.11] /home/home/.gradle/caches/transforms-2/files-2.1/88915dccd651b89410d6a0166462dce2/jetified-library-3.2.11/AndroidManifest.xml:15:22-95
+36    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" />
+36-->[io.nlopez.smartlocation:library:3.2.11] /home/home/.gradle/caches/transforms-2/files-2.1/88915dccd651b89410d6a0166462dce2/jetified-library-3.2.11/AndroidManifest.xml:16:5-94
+36-->[io.nlopez.smartlocation:library:3.2.11] /home/home/.gradle/caches/transforms-2/files-2.1/88915dccd651b89410d6a0166462dce2/jetified-library-3.2.11/AndroidManifest.xml:16:22-91
+37
+38    <application
+38-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:23:3-36:17
+39        android:name="br.com.pioneers.team.MainApplication"
+39-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:23:16-47
+40        android:allowBackup="false"
+40-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:23:162-189
+41        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+41-->[androidx.core:core:1.5.0-alpha02] /home/home/.gradle/caches/transforms-2/files-2.1/4e295056043d3f71fb729b6bed2db59d/core-1.5.0-alpha02/AndroidManifest.xml:24:18-86
+42        android:debuggable="true"
+43        android:icon="@mipmap/ic_launcher"
+43-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:23:81-115
+44        android:label="@string/app_name"
+44-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:23:48-80
+45        android:roundIcon="@mipmap/ic_launcher_round"
+45-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:23:116-161
+46        android:theme="@style/AppTheme"
+46-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:23:190-221
+47        android:usesCleartextTraffic="true" >
+47-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/debug/AndroidManifest.xml:6:18-53
+48        <meta-data
+48-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:24:5-103
+49            android:name="expo.modules.updates.EXPO_UPDATE_URL"
+49-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:24:16-67
+50            android:value="YOUR-APP-URL-HERE" />
+50-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:24:68-101
+51        <meta-data
+51-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:25:5-93
+52            android:name="expo.modules.updates.EXPO_SDK_VERSION"
+52-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:25:16-68
+53            android:value="37.0.0" />
+53-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:25:69-91
+54        <meta-data
+54-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:26:5-82
+55            android:name="expo.modules.updates.ENABLED"
+55-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:26:16-59
+56            android:value="true" />
+56-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:26:60-80
+57        <meta-data
+57-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:27:5-105
+58            android:name="expo.modules.updates.EXPO_UPDATES_CHECK_ON_LAUNCH"
+58-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:27:16-80
+59            android:value="ALWAYS" />
+59-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:27:81-103
+60        <meta-data
+60-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:28:5-99
+61            android:name="expo.modules.updates.EXPO_UPDATES_LAUNCH_WAIT_MS"
+61-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:28:16-79
+62            android:value="0" />
+62-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:28:80-97
+63
+64        <activity
+64-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:29:5-34:16
+65            android:name="br.com.pioneers.team.MainActivity"
+65-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:29:15-43
+66            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+66-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:29:77-147
+67            android:label="@string/app_name"
+67-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:29:44-76
+68            android:launchMode="singleTask"
+68-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:29:148-179
+69            android:screenOrientation="portrait"
+69-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:29:269-305
+70            android:theme="@style/Theme.App.SplashScreen"
+70-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:29:223-268
+71            android:windowSoftInputMode="adjustResize" >
+71-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:29:180-222
+72            <intent-filter>
+72-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:30:7-33:23
+73                <action android:name="android.intent.action.MAIN" />
+73-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:31:9-60
+73-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:31:17-58
+74
+75                <category android:name="android.intent.category.LAUNCHER" />
+75-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:32:9-68
+75-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:32:19-66
+76            </intent-filter>
+77        </activity>
+78        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
+78-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:35:5-81
+78-->/home/home/Desktop/pioneiras/Pioneiras/android/app/src/main/AndroidManifest.xml:35:15-79
+79
+80        <provider
+80-->[:expo-file-system] /home/home/Desktop/pioneiras/Pioneiras/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:9-27:20
+81            android:name="expo.modules.filesystem.FileSystemFileProvider"
+81-->[:expo-file-system] /home/home/Desktop/pioneiras/Pioneiras/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:13-74
+82            android:authorities="br.com.pioneers.team.FileSystemFileProvider"
+82-->[:expo-file-system] /home/home/Desktop/pioneiras/Pioneiras/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:20:13-74
+83            android:exported="false"
+83-->[:expo-file-system] /home/home/Desktop/pioneiras/Pioneiras/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:21:13-37
+84            android:grantUriPermissions="true" >
+84-->[:expo-file-system] /home/home/Desktop/pioneiras/Pioneiras/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:22:13-47
+85            <meta-data
+85-->[:expo-file-system] /home/home/Desktop/pioneiras/Pioneiras/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:24:13-26:70
+86                android:name="android.support.FILE_PROVIDER_PATHS"
+86-->[:expo-file-system] /home/home/Desktop/pioneiras/Pioneiras/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:25:17-67
+87                android:resource="@xml/file_system_provider_paths" />
+87-->[:expo-file-system] /home/home/Desktop/pioneiras/Pioneiras/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:26:17-67
+88        </provider>
+89
+90        <service
+90-->[:expo-location] /home/home/Desktop/pioneiras/Pioneiras/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:9-18:40
+91            android:name="expo.modules.location.services.LocationTaskService"
+91-->[:expo-location] /home/home/Desktop/pioneiras/Pioneiras/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:13-78
+92            android:exported="false" />
+92-->[:expo-location] /home/home/Desktop/pioneiras/Pioneiras/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:13-37
+93
+94        <activity
+94-->[com.google.android.gms:play-services-base:16.0.1] /home/home/.gradle/caches/transforms-2/files-2.1/5bdb85e2ead73cd983bf904a4b2ef1ad/jetified-play-services-base-16.0.1/AndroidManifest.xml:23:9-26:75
+95            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+95-->[com.google.android.gms:play-services-base:16.0.1] /home/home/.gradle/caches/transforms-2/files-2.1/5bdb85e2ead73cd983bf904a4b2ef1ad/jetified-play-services-base-16.0.1/AndroidManifest.xml:24:13-79
+96            android:exported="false"
+96-->[com.google.android.gms:play-services-base:16.0.1] /home/home/.gradle/caches/transforms-2/files-2.1/5bdb85e2ead73cd983bf904a4b2ef1ad/jetified-play-services-base-16.0.1/AndroidManifest.xml:25:13-37
+97            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+97-->[com.google.android.gms:play-services-base:16.0.1] /home/home/.gradle/caches/transforms-2/files-2.1/5bdb85e2ead73cd983bf904a4b2ef1ad/jetified-play-services-base-16.0.1/AndroidManifest.xml:26:13-72
+98
+99        <meta-data
+99-->[com.google.android.gms:play-services-basement:16.0.1] /home/home/.gradle/caches/transforms-2/files-2.1/55f5c1507100939571b7e738c909b80d/jetified-play-services-basement-16.0.1/AndroidManifest.xml:23:9-25:69
+100            android:name="com.google.android.gms.version"
+100-->[com.google.android.gms:play-services-basement:16.0.1] /home/home/.gradle/caches/transforms-2/files-2.1/55f5c1507100939571b7e738c909b80d/jetified-play-services-basement-16.0.1/AndroidManifest.xml:24:13-58
+101            android:value="@integer/google_play_services_version" />
+101-->[com.google.android.gms:play-services-basement:16.0.1] /home/home/.gradle/caches/transforms-2/files-2.1/55f5c1507100939571b7e738c909b80d/jetified-play-services-basement-16.0.1/AndroidManifest.xml:25:13-66
+102
+103        <service
+103-->[androidx.room:room-runtime:2.1.0] /home/home/.gradle/caches/transforms-2/files-2.1/dd7893f26029167e3adbacf60755e755/room-runtime-2.1.0/AndroidManifest.xml:25:9-27:40
+104            android:name="androidx.room.MultiInstanceInvalidationService"
+104-->[androidx.room:room-runtime:2.1.0] /home/home/.gradle/caches/transforms-2/files-2.1/dd7893f26029167e3adbacf60755e755/room-runtime-2.1.0/AndroidManifest.xml:26:13-74
+105            android:exported="false" />
+105-->[androidx.room:room-runtime:2.1.0] /home/home/.gradle/caches/transforms-2/files-2.1/dd7893f26029167e3adbacf60755e755/room-runtime-2.1.0/AndroidManifest.xml:27:13-37
+106        <service
+106-->[io.nlopez.smartlocation:library:3.2.11] /home/home/.gradle/caches/transforms-2/files-2.1/88915dccd651b89410d6a0166462dce2/jetified-library-3.2.11/AndroidManifest.xml:19:9-21:40
+107            android:name="io.nlopez.smartlocation.activity.providers.ActivityGooglePlayServicesProvider$ActivityRecognitionService"
+107-->[io.nlopez.smartlocation:library:3.2.11] /home/home/.gradle/caches/transforms-2/files-2.1/88915dccd651b89410d6a0166462dce2/jetified-library-3.2.11/AndroidManifest.xml:20:13-132
+108            android:exported="false" />
+108-->[io.nlopez.smartlocation:library:3.2.11] /home/home/.gradle/caches/transforms-2/files-2.1/88915dccd651b89410d6a0166462dce2/jetified-library-3.2.11/AndroidManifest.xml:21:13-37
+109        <service
+109-->[io.nlopez.smartlocation:library:3.2.11] /home/home/.gradle/caches/transforms-2/files-2.1/88915dccd651b89410d6a0166462dce2/jetified-library-3.2.11/AndroidManifest.xml:22:9-24:40
+110            android:name="io.nlopez.smartlocation.geofencing.providers.GeofencingGooglePlayServicesProvider$GeofencingService"
+110-->[io.nlopez.smartlocation:library:3.2.11] /home/home/.gradle/caches/transforms-2/files-2.1/88915dccd651b89410d6a0166462dce2/jetified-library-3.2.11/AndroidManifest.xml:23:13-127
+111            android:exported="false" />
+111-->[io.nlopez.smartlocation:library:3.2.11] /home/home/.gradle/caches/transforms-2/files-2.1/88915dccd651b89410d6a0166462dce2/jetified-library-3.2.11/AndroidManifest.xml:24:13-37
+112        <service
+112-->[io.nlopez.smartlocation:library:3.2.11] /home/home/.gradle/caches/transforms-2/files-2.1/88915dccd651b89410d6a0166462dce2/jetified-library-3.2.11/AndroidManifest.xml:25:9-27:40
+113            android:name="io.nlopez.smartlocation.geocoding.providers.AndroidGeocodingProvider$AndroidGeocodingService"
+113-->[io.nlopez.smartlocation:library:3.2.11] /home/home/.gradle/caches/transforms-2/files-2.1/88915dccd651b89410d6a0166462dce2/jetified-library-3.2.11/AndroidManifest.xml:26:13-120
+114            android:exported="false" />
+114-->[io.nlopez.smartlocation:library:3.2.11] /home/home/.gradle/caches/transforms-2/files-2.1/88915dccd651b89410d6a0166462dce2/jetified-library-3.2.11/AndroidManifest.xml:27:13-37
+115    </application>
+116
+117</manifest>
